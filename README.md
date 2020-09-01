@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/CODA-19/fhir-templates.svg?branch=master)](https://travis-ci.com/CODA-19/fhir-templates.svg?branch=master)
+[![Build Status](https://travis-ci.com/CODA-19/fhir-templates.svg?branch=master)](https://travis-ci.com/github/CODA-19/fhir-templates)
 <br />
 
 # CODA-19: FHIR templates
