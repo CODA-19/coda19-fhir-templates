@@ -1,0 +1,19 @@
+{
+  "name": "fhir-templates",
+  "version": "1.0.0",
+  "description": "FHIR templates for the CODA-19 project.",
+  "main": "jasmine",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CODA-19/fhir-templates.git"
+  },
+  "author": "Kip Brown, Rajeev Das, Louis Mullie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CODA-19/fhir-templates/issues"
+  },
+  "homepage": "https://github.com/CODA-19/fhir-templates#readme"
+}
