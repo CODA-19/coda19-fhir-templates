@@ -1,8 +1,11 @@
+[![Build Status](https://travis-ci.com/CODA-19/fhir-templates.svg?branch=master)](https://travis-ci.com/CODA-19/fhir-templates.svg?branch=master)
+<br />
+
 # CODA-19: FHIR templates
 
 This repository contains FHIR templates for the CODA-19 project. The templates contain dummy data and are tested against the FHIR schema.
 
-##Requirements
+## Requirements
 
 - NodeJS version 12+
 - Node package manager (NPM)
