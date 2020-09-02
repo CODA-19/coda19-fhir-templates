@@ -154,3 +154,20 @@ describe('Procedure', function() {
   })
 
 })
+
+describe('ImagingStudy', function() {
+
+  const templateFileName = './lib/templates/ImagingStudy.js'
+  
+  it('should be readable and valid JSON', function() {
+    const patientJson = loadTemplate(templateFileName)
+  })
+  
+  it('should validate against the FHIR schema', function() {
+    const patientJson = loadTemplate(templateFileName)
+    const validationWarnings = FHIRValidator.validate(patientJson)
+    expect(validationWarnings.length).toBe(0, 'Error(s) identified during schema validation.')
+    if (validationWarnings.length > 0) console.log(validationWarnings)
+  })
+
+})

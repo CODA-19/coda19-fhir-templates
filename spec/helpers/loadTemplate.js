@@ -27,6 +27,7 @@ function loadTemplate (fileName) {
   try {
     jsonObj = JSON.parse(jsonString)
   } catch (err) {
+    console.log(err)
     throw `Invalid JSON in template: ${fileName}`
   }
   
