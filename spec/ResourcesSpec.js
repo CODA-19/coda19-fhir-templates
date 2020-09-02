@@ -104,6 +104,23 @@ describe('Observation-VitalSigns', function() {
 
 })
 
+describe('Observation-Vent', function() {
+
+  const templateFileName = './lib/templates/Observation-Vent.js'
+  
+  it('should be readable and valid JSON', function() {
+    const patientJson = loadTemplate(templateFileName)
+  })
+  
+  it('should validate against the FHIR schema', function() {
+    const patientJson = loadTemplate(templateFileName)
+    const validationWarnings = FHIRValidator.validate(patientJson)
+    expect(validationWarnings.length).toBe(0, 'Error(s) identified during schema validation.')
+    if (validationWarnings.length > 0) console.log(validationWarnings)
+  })
+
+})
+
 describe('Condition', function() {
 
   const templateFileName = './lib/templates/Condition.js'
