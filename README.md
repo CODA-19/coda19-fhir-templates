@@ -30,4 +30,4 @@ jasmine
 
 ## Authors
 
-Kip Brown, Rajeev Das, Louis Mullie
+Kip Brown, Rajeev Das, Louis Mullie, Pascal St-Onge
