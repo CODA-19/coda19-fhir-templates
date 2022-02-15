@@ -3,7 +3,23 @@
 
 # CODA-19: FHIR templates
 
-This repository contains FHIR templates for the CODA-19 project. The templates contain dummy data and are tested against the FHIR schema.
+This repository contains FHIR templates in JSON format for resources of interest for the CODA project. The templates contain dummy data and are tested against the FHIR schema.
+
+## Templates
+
+- Encounter
+- ImagingStudy
+- Location - bed
+- Location - ward
+- MedicationAdministration
+- Observation - Culture data
+- Observation - Lab data
+- Observation - PCR data
+- Observation - Ventilation data
+- Observation - Vital signs
+- Patient
+- Procedure
+- ServiceRequest
 
 ## Requirements
 
