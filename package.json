@@ -1,6 +1,6 @@
 {
-  "name": "fhir-templates",
-  "version": "1.0.0",
+  "name": "@CODA-19/coda19-fhir-templates",
+  "version": "1.0.1",
   "description": "FHIR templates for the CODA-19 project.",
   "main": "jasmine",
   "scripts": {
