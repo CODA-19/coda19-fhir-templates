@@ -6,16 +6,17 @@
   "scripts": {
     "test": "jasmine-node spec/"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/CODA-19/coda19-fhir-templates.git"
+  "homepage": "https://github.com/CODA-19/coda19-fhir-templates",
+  "repository": "git://github.com/CODA-19/coda19-fhir-templates.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/",
+    "access": "restricted"
   },
   "author": "Kip Brown, Rajeev Das, Louis Mullie, Pascal St-Onge",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/CODA-19/fhir-templates/issues"
   },
-  "homepage": "https://github.com/CODA-19/fhir-templates#readme",
   "dependencies": {
     "@asymmetrik/fhir-json-schema-validator": "^0.9.5",
     "jasmine": "^3.6.1",
