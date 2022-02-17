@@ -17,11 +17,11 @@ jobs:
           cache: "npm"
       - name: Install dependencies
         run: npm install
-      #  env:
-      #    GITHUB_PAT: ${{secrets.FORCED_GITHUB_PAT}}
+        env:
+          PERSONAL_ACCESS_TOKEN: ${{secrets.PERSONAL_ACCESS_TOKEN}}
       - name: "Set package prerelease based on branch name and commit"
         run: npm version prerelease --preid="`git branch --show-current`-`echo ${GITHUB_SHA} | cut -c1-8`" --no-git-tag-version
       - name: Publish package with branch name as tag
         run: npm publish --tag "`git branch --show-current | sed 's/[^a-z0-9]/-/gi'`" --force
-        #env:
-        #  GITHUB_PAT: ${{secrets.GITHUB_TOKEN}}
+        env:
+          PERSONAL_ACCESS_TOKEN: ${{secrets.PERSONAL_ACCESS_TOKEN}}
