@@ -8,9 +8,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CODA-19/fhir-templates.git"
+    "url": "https://github.com/CODA-19/coda19-fhir-templates.git"
   },
-  "author": "Kip Brown, Rajeev Das, Louis Mullie",
+  "author": "Kip Brown, Rajeev Das, Louis Mullie, Pascal St-Onge",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/CODA-19/fhir-templates/issues"
