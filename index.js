@@ -9,8 +9,9 @@ export const FiltersByDataType = {
   "array": [
     "is empty",
     "is not empty",
-    "contains",
-    "does not contain"
+    "contains any element where",
+    "contains no element where",
+    "contains only elements where"
   ]
 }
 export const ResourceTypes = [
@@ -32,15 +33,15 @@ export const AttributesByResourceType = {
     },
     {
       "name": "subject.reference",
-      "type": "string"
+      "type": "dateTime"
     },
     {
       "name": "encounter.reference",
-      "type": "string"
+      "type": "dateTime"
     },
     {
       "name": "onsetDateTime",
-      "type": "string"
+      "type": "dateTime"
     },
     {
       "name": "code.coding",
@@ -88,7 +89,7 @@ export const AttributesByResourceType = {
     },
     {
       "name": "subject.reference",
-      "type": "string"
+      "type": "dateTime"
     },
     {
       "name": "location",
@@ -108,21 +109,21 @@ export const AttributesByResourceType = {
         },
         {
           "name": "period.start",
-          "type": "string"
+          "type": "dateTime"
         },
         {
           "name": "period.end",
-          "type": "string"
+          "type": "dateTime"
         }
       ]
     },
     {
       "name": "period.start",
-      "type": "string"
+      "type": "dateTime"
     },
     {
       "name": "period.end",
-      "type": "string"
+      "type": "dateTime"
     }
   ],
   "ImagingStudy": [
@@ -168,15 +169,15 @@ export const AttributesByResourceType = {
     },
     {
       "name": "started",
-      "type": "string"
+      "type": "dateTime"
     },
     {
       "name": "numberOfSeries",
-      "type": "string"
+      "type": "integer"
     },
     {
       "name": "numberOfInstances",
-      "type": "string"
+      "type": "integer"
     },
     {
       "name": "description",
@@ -200,7 +201,7 @@ export const AttributesByResourceType = {
             },
             {
               "name": "code",
-              "type": "string"
+              "type": "dateTime"
             },
             {
               "name": "display",
@@ -220,7 +221,7 @@ export const AttributesByResourceType = {
         },
         {
           "name": "number",
-          "type": "string"
+          "type": "integer"
         },
         {
           "name": "modality.system",
@@ -236,7 +237,7 @@ export const AttributesByResourceType = {
         },
         {
           "name": "bodySite.code",
-          "type": "string"
+          "type": "dateTime"
         },
         {
           "name": "bodySite.display",
@@ -248,7 +249,7 @@ export const AttributesByResourceType = {
         },
         {
           "name": "numberOfInstances",
-          "type": "string"
+          "type": "integer"
         }
       ]
     }
@@ -334,7 +335,7 @@ export const AttributesByResourceType = {
         },
         {
           "name": "id",
-          "type": "string"
+          "type": "dateTime"
         },
         {
           "name": "code.coding",
@@ -346,7 +347,7 @@ export const AttributesByResourceType = {
             },
             {
               "name": "code",
-              "type": "string"
+              "type": "dateTime"
             },
             {
               "name": "display",
@@ -358,15 +359,15 @@ export const AttributesByResourceType = {
     },
     {
       "name": "medicationReference.reference",
-      "type": "string"
+      "type": "dateTime"
     },
     {
       "name": "effectivePeriod.start",
-      "type": "string"
+      "type": "dateTime"
     },
     {
       "name": "effectivePeriod.end",
-      "type": "string"
+      "type": "dateTime"
     },
     {
       "name": "dosage.text",
@@ -382,7 +383,7 @@ export const AttributesByResourceType = {
         },
         {
           "name": "code",
-          "type": "string"
+          "type": "dateTime"
         },
         {
           "name": "display",
@@ -392,7 +393,7 @@ export const AttributesByResourceType = {
     },
     {
       "name": "dosage.dose.value",
-      "type": "string"
+      "type": "integer"
     },
     {
       "name": "dosage.dose.unit",
@@ -418,15 +419,15 @@ export const AttributesByResourceType = {
     },
     {
       "name": "effectiveDateTime",
-      "type": "string"
+      "type": "dateTime"
     },
     {
       "name": "subject.reference",
-      "type": "string"
+      "type": "dateTime"
     },
     {
       "name": "encounter.reference",
-      "type": "string"
+      "type": "dateTime"
     },
     {
       "name": "code.coding",
@@ -438,7 +439,7 @@ export const AttributesByResourceType = {
         },
         {
           "name": "code",
-          "type": "string"
+          "type": "dateTime"
         },
         {
           "name": "display",
@@ -460,7 +461,7 @@ export const AttributesByResourceType = {
         },
         {
           "name": "code",
-          "type": "string"
+          "type": "dateTime"
         },
         {
           "name": "display",
@@ -470,7 +471,7 @@ export const AttributesByResourceType = {
     },
     {
       "name": "valueQuantity.value",
-      "type": "string"
+      "type": "integer"
     },
     {
       "name": "valueQuantity.unit",
@@ -496,11 +497,11 @@ export const AttributesByResourceType = {
     },
     {
       "name": "birthDate",
-      "type": "string"
+      "type": "dateTime"
     },
     {
       "name": "deceasedDateTime",
-      "type": "string"
+      "type": "dateTime"
     }
   ],
   "Procedure": [
@@ -532,7 +533,7 @@ export const AttributesByResourceType = {
         },
         {
           "name": "code",
-          "type": "string"
+          "type": "dateTime"
         },
         {
           "name": "display",
@@ -546,11 +547,11 @@ export const AttributesByResourceType = {
     },
     {
       "name": "performedPeriod.start",
-      "type": "string"
+      "type": "dateTime"
     },
     {
       "name": "performedPeriod.end",
-      "type": "string"
+      "type": "dateTime"
     },
     {
       "name": "status",
@@ -576,7 +577,7 @@ export const AttributesByResourceType = {
     },
     {
       "name": "authoredOn",
-      "type": "string"
+      "type": "dateTime"
     },
     {
       "name": "priority",

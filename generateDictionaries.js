@@ -1,6 +1,41 @@
 const fs = require("fs");
 const _ = require("lodash");
 
+// https://www.hl7.org/fhir/datatypes.html
+const DATETIME_REGEXP =
+  /([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[1-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)?(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?/;
+
+const DATE_REGEXP =
+  /([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[1-9]|[1-2][0-9]|3[0-1]))?)?/;
+
+const TIME_REGEXP = /([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)?/;
+
+const deduceTypeFromAttributeValue = (value) => {
+  if (typeof value === "boolean") {
+    return "boolean";
+  } else if (typeof value === "string") {
+    if (value.match(DATETIME_REGEXP)) {
+      return "dateTime";
+    } else if (value.match(TIME_REGEXP)) {
+      return "time";
+    } else if (value.match(DATE_REGEXP)) {
+      return "date";
+    } else {
+      return "string";
+    }
+  } else if (typeof value === "number") {
+    if (value.toString() === parseInt(value).toString()) {
+      return "integer";
+    } else if (value.toString() === parseFloat(value).toString()) {
+      return "decimal";
+    } else {
+      throw new Error("Could not deduce number format: ", value);
+    }
+  } else {
+    throw new Error("Could not deduce type from attribute: ", value);
+  }
+};
+
 const recursivelyFindPaths = (
   attributeDictionary,
   attributeNames,
@@ -29,7 +64,7 @@ const recursivelyFindPaths = (
     } else {
       paths.push({
         name: prefixedAttributeName,
-        type: "string",
+        type: deduceTypeFromAttributeValue(attribute),
       });
     }
   }
@@ -65,12 +100,17 @@ for (const templateFile of templateFileList) {
     ""
   );
 }
-
 const resourceTypes = Object.keys(attributeDictionary);
 
 const filtersByDataType = {
   string: ["equal", "not equal", "is null", "is not null"],
-  array: ["is empty", "is not empty", "contains", "does not contain"],
+  array: [
+    "is empty",
+    "is not empty",
+    "contains any element where",
+    "contains no element where",
+    "contains only elements where",
+  ],
 };
 
 fs.writeFileSync(
