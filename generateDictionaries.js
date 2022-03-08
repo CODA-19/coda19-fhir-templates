@@ -62,10 +62,17 @@ const recursivelyFindPaths = (
         )
       );
     } else {
-      paths.push({
-        name: prefixedAttributeName,
-        type: deduceTypeFromAttributeValue(attribute),
-      });
+      if (prefixedAttributeName === "code") {
+        paths.push({
+          name: prefixedAttributeName,
+          type: "string"
+        });
+      } else {
+        paths.push({
+          name: prefixedAttributeName,
+          type: deduceTypeFromAttributeValue(attribute),
+        });
+      }
     }
   }
   return _.flatten(paths);

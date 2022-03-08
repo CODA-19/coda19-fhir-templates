@@ -201,7 +201,7 @@ export const AttributesByResourceType = {
             },
             {
               "name": "code",
-              "type": "dateTime"
+              "type": "string"
             },
             {
               "name": "display",
@@ -347,7 +347,7 @@ export const AttributesByResourceType = {
             },
             {
               "name": "code",
-              "type": "dateTime"
+              "type": "string"
             },
             {
               "name": "display",
@@ -383,7 +383,7 @@ export const AttributesByResourceType = {
         },
         {
           "name": "code",
-          "type": "dateTime"
+          "type": "string"
         },
         {
           "name": "display",
@@ -439,7 +439,7 @@ export const AttributesByResourceType = {
         },
         {
           "name": "code",
-          "type": "dateTime"
+          "type": "string"
         },
         {
           "name": "display",
@@ -461,7 +461,7 @@ export const AttributesByResourceType = {
         },
         {
           "name": "code",
-          "type": "dateTime"
+          "type": "string"
         },
         {
           "name": "display",
@@ -533,7 +533,7 @@ export const AttributesByResourceType = {
         },
         {
           "name": "code",
-          "type": "dateTime"
+          "type": "string"
         },
         {
           "name": "display",
