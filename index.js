@@ -502,6 +502,14 @@ export const AttributesByResourceType = {
     {
       "name": "deceasedDateTime",
       "type": "dateTime"
+    },
+    {
+      "name": "age",
+      "type": "integer"
+    },
+    {
+      "name": "isDeceased",
+      "type": "boolean"
     }
   ],
   "Procedure": [

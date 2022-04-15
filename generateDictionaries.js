@@ -106,7 +106,20 @@ for (const templateFile of templateFileList) {
     resourceAttributeNames,
     ""
   );
+
+  if (resourceName === 'Patient') {
+    attributeDictionary[resourceName].push({
+      "name": "age",
+      "type": "integer"
+    })
+    attributeDictionary[resourceName].push({
+      "name": "isDeceased",
+      "type": "boolean"
+    })
+  }
+
 }
+
 const resourceTypes = Object.keys(attributeDictionary);
 
 const filtersByDataType = {
