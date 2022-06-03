@@ -470,19 +470,19 @@ export const AttributesByResourceType = {
       ]
     },
     {
-      "name": "valueQuantity.value",
+      "name": "value.Quantity.value",
       "type": "integer"
     },
     {
-      "name": "valueQuantity.unit",
+      "name": "value.Quantity.unit",
       "type": "string"
     },
     {
-      "name": "valueQuantity.system",
+      "name": "value.Quantity.system",
       "type": "string"
     },
     {
-      "name": "valueQuantity.code",
+      "name": "value.Quantity.code",
       "type": "string"
     }
   ],
