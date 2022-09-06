@@ -62,7 +62,7 @@ const recursivelyFindPaths = (
         )
       );
     } else {
-      if (prefixedAttributeName === "code") {
+      if (attributeName === "code" || attributeName === "reference") {
         paths.push({
           name: prefixedAttributeName,
           type: "string"

@@ -33,11 +33,11 @@ export const AttributesByResourceType = {
     },
     {
       "name": "subject.reference",
-      "type": "dateTime"
+      "type": "string"
     },
     {
       "name": "encounter.reference",
-      "type": "dateTime"
+      "type": "string"
     },
     {
       "name": "onsetDateTime",
@@ -89,7 +89,7 @@ export const AttributesByResourceType = {
     },
     {
       "name": "subject.reference",
-      "type": "dateTime"
+      "type": "string"
     },
     {
       "name": "location",
@@ -237,7 +237,7 @@ export const AttributesByResourceType = {
         },
         {
           "name": "bodySite.code",
-          "type": "dateTime"
+          "type": "string"
         },
         {
           "name": "bodySite.display",
@@ -359,7 +359,7 @@ export const AttributesByResourceType = {
     },
     {
       "name": "medicationReference.reference",
-      "type": "dateTime"
+      "type": "string"
     },
     {
       "name": "effectivePeriod.start",
@@ -423,11 +423,11 @@ export const AttributesByResourceType = {
     },
     {
       "name": "subject.reference",
-      "type": "dateTime"
+      "type": "string"
     },
     {
       "name": "encounter.reference",
-      "type": "dateTime"
+      "type": "string"
     },
     {
       "name": "code.coding",
@@ -585,6 +585,10 @@ export const AttributesByResourceType = {
     },
     {
       "name": "authoredOn",
+      "type": "dateTime"
+    },
+    {
+      "name": "occurrenceDateTime",
       "type": "dateTime"
     },
     {
