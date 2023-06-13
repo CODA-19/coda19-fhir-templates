@@ -310,6 +310,10 @@ export const AttributesByResourceType = {
           ]
         }
       ]
+    },
+    {
+      "name": "partOf",
+      "type": "string"
     }
   ],
   "MedicationAdministration": [

@@ -118,6 +118,13 @@ for (const templateFile of templateFileList) {
     })
   }
 
+  if (resourceName == 'Location') {
+    attributeDictionary[resourceName].push({
+      "name": "partOf",
+      "type": "string"
+    })
+  }
+
 }
 
 const resourceTypes = Object.keys(attributeDictionary);
