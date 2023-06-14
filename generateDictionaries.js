@@ -101,11 +101,13 @@ for (const templateFile of templateFileList) {
     resourceAttributeDictionary
   ).filter((x) => x != "id");
 
-  attributeDictionary[resourceName] = recursivelyFindPaths(
+  const resourcePaths = recursivelyFindPaths(
     resourceAttributeDictionary,
     resourceAttributeNames,
     ""
   );
+
+  attributeDictionary[resourceName] = _.unionBy(resourcePaths, attributeDictionary[resourceName], 'name');
 
   if (resourceName === 'Patient') {
     attributeDictionary[resourceName].push({
@@ -117,14 +119,6 @@ for (const templateFile of templateFileList) {
       "type": "boolean"
     })
   }
-
-  if (resourceName == 'Location') {
-    attributeDictionary[resourceName].push({
-      "name": "partOf",
-      "type": "string"
-    })
-  }
-
 }
 
 const resourceTypes = Object.keys(attributeDictionary);

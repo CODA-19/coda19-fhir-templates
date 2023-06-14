@@ -312,7 +312,7 @@ export const AttributesByResourceType = {
       ]
     },
     {
-      "name": "partOf",
+      "name": "partOf.reference",
       "type": "string"
     }
   ],
@@ -488,6 +488,64 @@ export const AttributesByResourceType = {
     {
       "name": "valueQuantity.code",
       "type": "string"
+    },
+    {
+      "name": "issued",
+      "type": "dateTime"
+    },
+    {
+      "name": "device.reference",
+      "type": "string"
+    },
+    {
+      "name": "bodySite.text",
+      "type": "string"
+    },
+    {
+      "name": "interpretation",
+      "type": "array",
+      "subpaths": [
+        {
+          "name": "coding",
+          "type": "array",
+          "subpaths": [
+            {
+              "name": "system",
+              "type": "string"
+            },
+            {
+              "name": "code",
+              "type": "string"
+            },
+            {
+              "name": "display",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "text",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "method.coding",
+      "type": "array",
+      "subpaths": [
+        {
+          "name": "system",
+          "type": "string"
+        },
+        {
+          "name": "code",
+          "type": "string"
+        },
+        {
+          "name": "display",
+          "type": "string"
+        }
+      ]
     }
   ],
   "Patient": [
